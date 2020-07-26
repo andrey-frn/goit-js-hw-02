@@ -13,7 +13,7 @@ return true;
 };
 
 const addLogin = function (allLogins, login) {
-    if (isLoginValid(login) === false) {
+    if (!isLoginValid(login)) {
         return "Ошибка! Логин должен быть от 4 до 16 символов";
     } else if (isLoginUnique(allLogins, login) === true) {
         return "Логин успешно добавлен!";
